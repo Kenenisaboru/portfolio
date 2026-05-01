@@ -117,7 +117,6 @@ const App = () => {
       title: 'Aseko Students Platform — Community Hub',
       desc: 'A cross-platform networking solution for students from Arsi Aseko. Built as a Progressive Web App (PWA) to enable communication and resource sharing across mobile and desktop devices.',
       link: 'https://github.com/Kenenisaboru/student-platform',
-      demo: 'https://student-platform-murex.vercel.app/',
       tech: ['React', 'Firebase', 'PWA', 'Tailwind CSS', 'Real-time Chat', 'Cloud Storage'],
       type: 'Full-Stack / PWA',
       icon: <FaUsers />,

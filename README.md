@@ -7,7 +7,7 @@
 
 Award-winning Full-Stack Developer specializing in the **MERN Stack**, **PWA Development**, and building scalable, user-centric solutions. Winner of the Haramaya University Hackathon and Top 6 Finalist in the East Ethiopian Cursor Hackathon.
 
-🔗 **Live Demo:** [portfolio.kenenisaboru.com](https://student-platform-murex.vercel.app/)
+🔗 **Live Demo:** [portfolio.kenenisaboru.github.io](https://Kenenisaboru.github.io/Personal-portfolio/)
 
 ---
 
