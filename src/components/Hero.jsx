@@ -10,7 +10,8 @@ import {
   FaGraduationCap,
   FaRocket,
   FaTelegram,
-  FaDownload
+  FaDownload,
+  FaCode
 } from 'react-icons/fa';
 
 const Hero = ({ heroBg, typedText, personalInfo, stats, onScrollToSection }) => {
