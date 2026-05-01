@@ -49,7 +49,7 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const observerRef = useRef(null);
 
-  const tagline = 'Full-Stack Developer specializing in React, Node.js, and modern web technologies. Passionate about creating impactful digital solutions.';
+  const tagline = 'Full-Stack Developer & Best Hackathons Competitor specializing in React, Node.js, and modern web technologies. Passionate about creating impactful digital solutions.';
 
   const skills = [
     { name: 'React', level: 'Advanced', percent: '85%', icon: <SiReact />, color: '#61DAFB', category: 'Frontend' },
@@ -153,9 +153,9 @@ const App = () => {
   // Awards and Certifications
   const awards = [
     {
-      title: 'Voice of HRU — Hackathon Winner',
+      title: 'Best Hackathons Competitor',
       org: 'Haramaya University Hackathon — 2026',
-      desc: 'Developed an innovative student feedback management system that won recognition for its potential to improve campus communication and administrative efficiency.',
+      desc: 'Recognized as the best competitor among many developers for building an innovative student feedback management system.',
       icon: <FaAward />,
       image: null,
       type: 'hackathon',

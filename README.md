@@ -1,11 +1,11 @@
-# 🚀 Kenenisa Boru | Full-Stack Developer & Hackathon Winner
+# 🚀 Kenenisa Boru | Full-Stack Developer & Best Hackathons Competitor
 
 ![GitHub stars](https://img.shields.io/github/stars/Kenenisaboru/portfolio?style=for-the-badge&color=6366f1)
 ![GitHub forks](https://img.shields.io/github/forks/Kenenisaboru/portfolio?style=for-the-badge&color=06b6d4)
 ![GitHub top language](https://img.shields.io/github/languages/top/Kenenisaboru/portfolio?style=for-the-badge)
 ![GitHub last commit](https://img.shields.io/github/last-commit/Kenenisaboru/portfolio?style=for-the-badge&color=f59e0b)
 
-Award-winning Full-Stack Developer specializing in the **MERN Stack**, **PWA Development**, and building scalable, user-centric solutions. Winner of the Haramaya University Hackathon and Top 6 Finalist in the East Ethiopian Cursor Hackathon.
+Award-winning Full-Stack Developer specializing in the **MERN Stack**, **PWA Development**, and building scalable, user-centric solutions. Recognized as the Best Hackathons Competitor among many developers and Top 6 Finalist in the East Ethiopian Cursor Hackathon.
 
 🔗 **Live Demo:** [portfolio.kenenisaboru.github.io](https://Kenenisaboru.github.io/Personal-portfolio/)
 
@@ -13,7 +13,7 @@ Award-winning Full-Stack Developer specializing in the **MERN Stack**, **PWA Dev
 
 ## 🌟 Key Highlights
 
-- 🏆 **Hackathon Winner:** First Place at Haramaya University Student Complaint Platform Hackathon.
+- 🏆 **Top Competitor:** Recognized as the Best Hackathons Competitor among hundreds of developers.
 - 💻 **1350+ Commits:** Dedicated and consistent developer with a strong focus on clean code.
 - 📱 **PWA Expert:** Specialized in building installable web applications that work offline.
 - 🚀 **Full-Stack Mastery:** Extensive experience with React, Node.js, Express, and both SQL/NoSQL databases.
