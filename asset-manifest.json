@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/kenenisaboru.github.io/Personal-portfolio/static/css/main.a17ecad2.css",
-    "main.js": "/kenenisaboru.github.io/Personal-portfolio/static/js/main.e01cebb5.js",
+    "main.js": "/kenenisaboru.github.io/Personal-portfolio/static/js/main.f0d4d98a.js",
     "static/js/453.15a626a8.chunk.js": "/kenenisaboru.github.io/Personal-portfolio/static/js/453.15a626a8.chunk.js",
     "static/media/photo_2025-04-27_06-58-00.jpg": "/kenenisaboru.github.io/Personal-portfolio/static/media/photo_2025-04-27_06-58-00.660bf968eefa11ca03b1.jpg",
     "static/media/photo_2026-04-01_16-11-32.jpg": "/kenenisaboru.github.io/Personal-portfolio/static/media/photo_2026-04-01_16-11-32.44536b2d9dde68bc05b8.jpg",
@@ -13,11 +13,11 @@
     "static/media/istockphoto-2170146497-612x612.webp": "/kenenisaboru.github.io/Personal-portfolio/static/media/istockphoto-2170146497-612x612.bed940f577cefb04ff88.webp",
     "index.html": "/kenenisaboru.github.io/Personal-portfolio/index.html",
     "main.a17ecad2.css.map": "/kenenisaboru.github.io/Personal-portfolio/static/css/main.a17ecad2.css.map",
-    "main.e01cebb5.js.map": "/kenenisaboru.github.io/Personal-portfolio/static/js/main.e01cebb5.js.map",
+    "main.f0d4d98a.js.map": "/kenenisaboru.github.io/Personal-portfolio/static/js/main.f0d4d98a.js.map",
     "453.15a626a8.chunk.js.map": "/kenenisaboru.github.io/Personal-portfolio/static/js/453.15a626a8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a17ecad2.css",
-    "static/js/main.e01cebb5.js"
+    "static/js/main.f0d4d98a.js"
   ]
 }
