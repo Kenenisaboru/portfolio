@@ -7,8 +7,6 @@
 
 Award-winning Full-Stack Developer specializing in the **MERN Stack**, **PWA Development**, and building scalable, user-centric solutions. Recognized as the Best Hackathons Competitor among many developers and Top 6 Finalist in the East Ethiopian Cursor Hackathon.
 
-🔗 **Live Demo:** [portfolio.kenenisaboru.github.io](https://Kenenisaboru.github.io/Personal-portfolio/)
-
 ---
 
 ## 🌟 Key Highlights
