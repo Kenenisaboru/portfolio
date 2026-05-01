@@ -1,0 +1,3 @@
+"My personal portfolio showcases my web development projects, skills, and experience. It highlights responsive websites, real-world applications like the HUEPDC website and a Hospital Management System, and demonstrates my ability to build clean, efficient, and functional web solutions. Check out the live demo here
+this is my portfolio live demo https://app.netlify.com/projects/kenenisa-boru-personal-portfoli889dd0/
+."
