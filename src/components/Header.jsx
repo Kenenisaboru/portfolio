@@ -24,6 +24,8 @@ const Header = ({ activeSection, isMenuOpen, onToggleMenu, onScrollToSection }) 
             <span className={`menu-line ${isMenuOpen ? 'open' : ''}`}></span>
           </button>
           
+          <div className={`nav-overlay ${isMenuOpen ? 'active' : ''}`} onClick={onToggleMenu}></div>
+          
           <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
             {['about', 'skills', 'projects', 'opensource', 'awards', 'contact'].map(
               (section) => (
