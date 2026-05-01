@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin, FaFacebookF, FaInstagram, FaCalendarAlt, FaPaperPlane, FaCheckCircle, FaTelegram } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaGithub, FaLinkedin, FaFacebookF, FaInstagram, FaCalendarAlt, FaPaperPlane, FaCheckCircle, FaTelegram, FaCode } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
