@@ -157,15 +157,63 @@ const App = () => {
     }
   ];
 
-  // Featured Repositories
+  // Featured Repositories (Actual Completed Projects)
   const featuredRepositories = [
     {
-      title: 'Hospital Management System',
-      description: 'Developed the frontend interface for a hospital management system using React and Tailwind CSS.',
-      link: 'https://github.com/Kenenisaboru/Hospital-management-system',
-      contributions: ['Built responsive patient management interface', 'Implemented real-time updates', 'Enhanced user experience'],
-      tech: ['React', 'Tailwind CSS', 'JavaScript']
+      title: 'Voice of HRU — Student Complaint Platform',
+      description: 'A comprehensive feedback and complaint management system for Haramaya University students. Built with MERN stack & Socket.io for real-time admin updates.',
+      link: 'https://github.com/Kenenisaboru/-Student-complain-Voice-of-HRU',
+      contributions: [
+        'Built full-stack React & Node.js architecture with JWT authentication',
+        'Integrated Socket.io for real-time notification dispatch',
+        'Deployed live web application serving 500+ active students'
+      ],
+      tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Socket.io', 'JWT']
     },
+    {
+      title: 'Hospital Management System',
+      description: 'Full-stack enterprise hospital administration solution with patient records, doctor scheduling, medical history tracking, and role-based access control.',
+      link: 'https://github.com/Kenenisaboru/Hospital-management-system',
+      contributions: [
+        'Designed normalized MySQL database relational schema',
+        'Implemented secure multi-role auth (Admin, Doctor, Patient)',
+        'Created intuitive responsive dashboard interface using React'
+      ],
+      tech: ['React', 'Node.js', 'Express', 'MySQL', 'REST API', 'Redux']
+    },
+    {
+      title: 'Aseko Students Platform — Community Hub',
+      description: 'Cross-platform PWA networking application connecting 300+ students for resource sharing and communication.',
+      link: 'https://github.com/Kenenisaboru/student-platform',
+      contributions: [
+        'Built Progressive Web App (PWA) supporting offline access',
+        'Integrated Firebase real-time chat and document sharing',
+        'Designed mobile-first UI with Tailwind CSS'
+      ],
+      tech: ['React', 'Firebase', 'PWA', 'Tailwind CSS']
+    },
+    {
+      title: 'Frontend Tricks Collection',
+      description: 'Curated library of advanced CSS/JS UI components, micro-animations, and responsive layout patterns.',
+      link: 'https://github.com/Kenenisaboru/All-my-frontend-trick',
+      contributions: [
+        'Implemented reusable interactive UI animation snippets',
+        'Optimized CSS rendering performance & responsive breakpoints',
+        'Documented clean code patterns for modern web development'
+      ],
+      tech: ['HTML5', 'CSS3', 'JavaScript', 'GSAP']
+    },
+    {
+      title: 'Data Structure & Algorithm Library',
+      description: 'High-performance C++ implementation of essential algorithms and data structures with unit tests and benchmark analysis.',
+      link: 'https://github.com/Kenenisaboru/Data-structure-and-Algorithm',
+      contributions: [
+        'Implemented graph traversals, sorting, and tree algorithms in C++',
+        'Wrote comprehensive unit test suite and time-complexity docs',
+        'Benchmarked algorithmic efficiency'
+      ],
+      tech: ['C++', 'Algorithms', 'Data Structures', 'STL']
+    }
   ];
 
   // Awards and Certifications
