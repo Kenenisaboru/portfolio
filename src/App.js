@@ -11,7 +11,8 @@ import {
   FaCertificate,
   FaCalendarAlt,
   FaRocket,
-  FaUsers
+  FaUsers,
+  FaTrophy
 } from 'react-icons/fa';
 import {
   SiReact, SiJavascript, SiNodedotjs, SiExpress, SiMongodb,
@@ -49,7 +50,7 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const observerRef = useRef(null);
 
-  const tagline = 'Full-Stack Developer & Best Hackathons Competitor specializing in React, Node.js, and modern web technologies. Passionate about creating impactful digital solutions.';
+  const tagline = 'Full-Stack Developer & Hackathon Competitor specializing in React, Node.js, MERN stack, and modern mobile-first web applications.';
 
   const skills = [
     { name: 'React', level: 'Advanced', percent: '85%', icon: <SiReact />, color: '#61DAFB', category: 'Frontend' },
@@ -83,35 +84,42 @@ const App = () => {
       type: 'Full-Stack / Hackathon',
       icon: <FaRocket />,
       status: 'Live',
+      featured: true,
       highlights: [
-        'Serving 500+ students with real-time feedback',
-        'Technical Challenge: Socket.io integration for instant notifications',
-        'Admin dashboard with data visualization and analytics'
+        'Hackathon Winning Project for Haramaya University',
+        'Real-time status updates & Admin analytics dashboard',
+        'Serving 500+ active student feedback requests'
+      ]
+    },
+    {
+      title: 'LifeLink — Emergency Healthcare App',
+      desc: 'Innovative mobile health application developed for the East Ethiopian Cursor Hackathon. Designed to connect patients rapidly with emergency services and nearby hospitals.',
+      link: 'https://github.com/Kenenisaboru',
+      tech: ['React Native', 'Node.js', 'Express', 'Geolocation', 'REST API'],
+      type: 'Mobile / Hackathon',
+      icon: <FaTrophy />,
+      status: 'Completed',
+      featured: true,
+      highlights: [
+        'East Ethiopian Cursor Hackathon Top 6 Finalist',
+        'Real-time emergency dispatch tracking & instant alert dispatch',
+        'Mobile-first responsive architecture'
       ]
     },
     {
       title: 'Hospital Management System',
-      desc: 'A comprehensive full-stack hospital management system with patient management, appointment scheduling, medical records, and billing integration.',
+      desc: 'A comprehensive full-stack hospital management system with patient management, doctor scheduling, medical records, and billing integration.',
       link: 'https://github.com/Kenenisaboru/Hospital-management-system',
       tech: ['React', 'Node.js', 'Express', 'MySQL', 'REST API', 'JWT', 'Redux'],
       type: 'Full-Stack',
       icon: <FaHospital />,
       status: 'Completed',
+      featured: true,
       highlights: [
         'Secure multi-role authentication (Admin, Doctor, Patient)',
-        'Technical Challenge: Complex MySQL relational database schema optimization',
-        'Built to handle 50+ concurrent professional users'
+        'Complex MySQL relational database schema optimization',
+        'Built for enterprise healthcare workflows'
       ]
-    },
-    {
-      title: 'Frontend Tricks Collection',
-      desc: 'Curated collection of modern frontend techniques, animations, UI components, and best practices.',
-      link: 'https://github.com/Kenenisaboru/All-my-frontend-trick',
-      tech: ['HTML5', 'CSS3', 'JavaScript', 'GSAP', 'Animations', 'Responsive Design'],
-      type: 'Frontend',
-      icon: <FaLaptopCode />,
-      status: 'Ongoing',
-      highlights: ['Reusable components', 'Performance tips', 'Accessibility patterns']
     },
     {
       title: 'Aseko Students Platform — Community Hub',
@@ -123,19 +131,29 @@ const App = () => {
       status: 'Live',
       highlights: [
         'Connecting 300+ students across various universities',
-        'Technical Challenge: Optimized PWA caching for offline accessibility',
-        'Cross-platform installation on Android, iOS, and Desktop'
+        'Optimized PWA caching for offline accessibility',
+        'Cross-platform installation on Mobile & Desktop'
       ]
     },
     {
+      title: 'Frontend Tricks Collection',
+      desc: 'Curated collection of modern frontend techniques, smooth animations, dynamic UI components, and web layout best practices.',
+      link: 'https://github.com/Kenenisaboru/All-my-frontend-trick',
+      tech: ['HTML5', 'CSS3', 'JavaScript', 'GSAP', 'Animations', 'Responsive Design'],
+      type: 'Frontend',
+      icon: <FaLaptopCode />,
+      status: 'Ongoing',
+      highlights: ['Reusable animated components', 'Performance optimizations', 'CSS Grid & Flexbox patterns']
+    },
+    {
       title: 'Data Structure & Algorithm Library',
-      desc: 'Comprehensive C++ library implementing common data structures and algorithms with detailed documentation.',
+      desc: 'Comprehensive C++ library implementing essential data structures, sorting algorithms, and graph traversals with unit tests.',
       link: 'https://github.com/Kenenisaboru/Data-structure-and-Algorithm',
       tech: ['C++', 'STL', 'Algorithms', 'Data Structures', 'Unit Testing'],
       type: 'Algorithm',
       icon: <FaGraduationCap />,
       status: 'Completed',
-      highlights: ['Performance benchmarks', 'Detailed docs', 'Test cases']
+      highlights: ['Performance benchmark tests', 'In-depth algorithm documentation', 'Optimized time complexity']
     }
   ];
 
