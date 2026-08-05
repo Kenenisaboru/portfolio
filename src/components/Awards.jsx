@@ -1,7 +1,21 @@
-import React from 'react';
-import { FaCalendarAlt, FaCertificate, FaExternalLinkAlt } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { FaCalendarAlt, FaCertificate, FaExternalLinkAlt, FaTrophy, FaGraduationCap, FaBriefcase, FaAward } from 'react-icons/fa';
+
+const awardFilters = [
+  { id: 'all', label: 'All Awards', icon: <FaAward /> },
+  { id: 'hackathon', label: 'Hackathons', icon: <FaTrophy /> },
+  { id: 'certificate', label: 'Certifications', icon: <FaGraduationCap /> },
+  { id: 'internship', label: 'Internships', icon: <FaBriefcase /> },
+];
 
 const Awards = ({ awards, onOpenImageModal }) => {
+  const [activeFilter, setActiveFilter] = useState('all');
+
+  const filteredAwards = awards.filter(award => {
+    if (activeFilter === 'all') return true;
+    return award.type === activeFilter;
+  });
+
   return (
     <section id="awards" className="section awards">
       <div className="container">
@@ -10,16 +24,37 @@ const Awards = ({ awards, onOpenImageModal }) => {
           <h2 className="section-title">Certifications & Awards</h2>
           <div className="section-divider"></div>
           <p className="section-subtitle">
-            Professional recognition and achievements in web development
+            Professional achievements, hackathon wins, and technical certifications
           </p>
         </div>
 
+        {/* Filter Buttons */}
+        <div className="filter-wrapper animate-on-scroll">
+          <div className="filter-container">
+            {awardFilters.map(f => {
+              const count = f.id === 'all' 
+                ? awards.length 
+                : awards.filter(a => a.type === f.id).length;
+              
+              return (
+                <button
+                  key={f.id}
+                  className={`filter-btn ${activeFilter === f.id ? 'active' : ''}`}
+                  onClick={() => setActiveFilter(f.id)}
+                >
+                  {f.icon} {f.label} <span className="filter-badge-count">{count}</span>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
         <div className="awards-grid animate-on-scroll">
-          {awards.map((award, index) => (
+          {filteredAwards.map((award, index) => (
             <div 
               key={award.title} 
               className="award-card"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              style={{ animationDelay: `${index * 0.08}s` }}
             >
               <div className="award-card-header">
                 <div className="award-icon">
@@ -60,23 +95,25 @@ const Awards = ({ awards, onOpenImageModal }) => {
                     <FaCertificate /> View Certificate
                   </button>
                 ) : (
-                  <a 
-                    href={award.verification}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-primary"
-                  >
-                    <FaExternalLinkAlt /> Verify Online
-                  </a>
+                  award.verification && award.verification !== '#' && (
+                    <a 
+                      href={award.verification}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn btn-primary"
+                    >
+                      <FaExternalLinkAlt /> Verify Online
+                    </a>
+                  )
                 )}
-                {award.verification && award.image && (
+                {award.verification && award.verification !== '#' && award.image && (
                   <a 
                     href={award.verification}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="btn btn-outline"
                   >
-                    Verify
+                    Verify Link
                   </a>
                 )}
               </div>
@@ -85,7 +122,10 @@ const Awards = ({ awards, onOpenImageModal }) => {
         </div>
 
         <div className="certificates-showcase animate-on-scroll">
-          <h3>Certificate Gallery</h3>
+          <h3>Interactive Certificate Gallery</h3>
+          <p className="gallery-subtitle" style={{ textAlign: 'center', color: '#94a3b8', marginBottom: '1.5rem' }}>
+            Click on any certificate preview to inspect high-resolution credential
+          </p>
           <div className="certificate-gallery">
             {awards.filter(a => a.image).map((award, index) => (
               <div 
@@ -96,7 +136,7 @@ const Awards = ({ awards, onOpenImageModal }) => {
                 <img src={award.image} alt={award.title} />
                 <div className="certificate-thumbnail-overlay">
                   <FaCertificate />
-                  <span>{award.org}</span>
+                  <span>{award.title}</span>
                 </div>
               </div>
             ))}
