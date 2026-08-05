@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaGithub, FaExternalLinkAlt, FaServer, FaStar, FaBolt, FaLayerGroup, FaTrophy, FaMobileAlt, FaLaptopCode, FaCalculator } from 'react-icons/fa';
+import { FaGithub, FaExternalLinkAlt, FaServer, FaStar, FaCheckCircle, FaLayerGroup, FaTrophy, FaMobileAlt, FaLaptopCode, FaCalculator } from 'react-icons/fa';
 
 const getProjectTypeColor = (type) => {
   switch (type) {
@@ -89,84 +89,89 @@ const Projects = ({ projects }) => {
 
         {/* Projects Grid */}
         <div className="projects-grid animate-on-scroll">
-          {filteredProjects.map((project, index) => (
-            <div 
-              key={project.title} 
-              className={`project-card ${project.featured ? 'featured' : ''}`}
-              style={{ animationDelay: `${index * 0.08}s` }}
-            >
-              <div className="project-card-header">
-                <div className="project-icon" style={{ color: getProjectTypeColor(project.type) }}>
-                  {project.icon}
-                </div>
-                <div className="project-badges">
-                  <span 
-                    className="project-type" 
-                    style={{ backgroundColor: getProjectTypeColor(project.type) }}
-                  >
-                    {project.type}
-                  </span>
-                  <span 
-                    className="project-status"
-                    style={{ backgroundColor: getStatusColor(project.status) }}
-                  >
-                    {project.status}
-                  </span>
-                  {project.featured && (
-                    <span className="project-featured">
-                      <FaStar /> Featured
-                    </span>
-                  )}
-                </div>
-              </div>
+          {filteredProjects.map((project, index) => {
+            // Maximum 2 badges for a minimal clean top row
+            const badge1 = project.type;
+            const badge2 = project.featured ? 'Featured' : project.status;
 
-              <div className="project-card-body">
-                <h3 className="project-title">{project.title}</h3>
-                <p className="project-description">{project.desc}</p>
-                
-                {project.highlights && (
-                  <div className="project-highlights">
-                    {project.highlights.map((highlight, idx) => (
-                      <span key={idx} className="highlight-tag">
-                        <FaBolt /> {highlight}
+            return (
+              <div 
+                key={project.title} 
+                className={`project-card-minimal ${project.featured ? 'featured' : ''}`}
+                style={{ animationDelay: `${index * 0.08}s` }}
+              >
+                {/* Header: Icon + Max 2 subtle outline badges */}
+                <div className="project-card-minimal-header">
+                  <div className="project-icon-minimal">
+                    {project.icon}
+                  </div>
+                  <div className="project-badges-minimal">
+                    {badge1 && (
+                      <span className="badge-subtle badge-type">
+                        {badge1}
                       </span>
+                    )}
+                    {badge2 && (
+                      <span className={`badge-subtle ${project.featured ? 'badge-featured' : 'badge-status'}`}>
+                        {project.featured && <FaStar className="badge-icon" />}
+                        {badge2}
+                      </span>
+                    )}
+                  </div>
+                </div>
+
+                {/* Body: Prominent Title, Muted Description, Unboxed Highlight Bullet List */}
+                <div className="project-card-minimal-body">
+                  <h3 className="project-title-minimal">{project.title}</h3>
+                  <p className="project-description-minimal">{project.desc}</p>
+                  
+                  {project.highlights && project.highlights.length > 0 && (
+                    <ul className="project-highlights-list">
+                      {project.highlights.map((highlight, idx) => (
+                        <li key={idx} className="highlight-item">
+                          <FaCheckCircle className="highlight-bullet-icon" />
+                          <span>{highlight}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
+                  {/* Tech Stack Tags: Lightweight Outline Style */}
+                  <div className="project-tech-minimal">
+                    {project.tech.map(tech => (
+                      <span key={tech} className="tech-tag-minimal">{tech}</span>
                     ))}
                   </div>
-                )}
+                </div>
 
-                <div className="project-tech">
-                  {project.tech.map(tech => (
-                    <span key={tech} className="tech-tag">{tech}</span>
-                  ))}
+                {/* Footer: Compact CTA Buttons */}
+                <div className="project-card-minimal-footer">
+                  <div className="project-links-minimal">
+                    {project.link && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-minimal btn-code"
+                      >
+                        <FaGithub /> View Code
+                      </a>
+                    )}
+                    {project.demo && project.demo !== '#' && (
+                      <a
+                        href={project.demo}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-minimal btn-demo"
+                      >
+                        <FaExternalLinkAlt /> Live Demo
+                      </a>
+                    )}
+                  </div>
                 </div>
               </div>
-
-              <div className="project-card-footer">
-                <div className="project-links">
-                  {project.link && (
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link"
-                    >
-                      <FaGithub /> View Code
-                    </a>
-                  )}
-                  {project.demo && project.demo !== '#' && (
-                    <a
-                      href={project.demo}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="project-link demo"
-                    >
-                      <FaExternalLinkAlt /> Live Demo
-                    </a>
-                  )}
-                </div>
-              </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         <div className="projects-cta animate-on-scroll">
