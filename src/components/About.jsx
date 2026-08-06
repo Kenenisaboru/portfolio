@@ -81,7 +81,7 @@ const About = ({ personalInfo, profileImage, onScrollToSection, onOpenImageModal
               </p>
               
               <div className="about-highlights">
-                <div className="highlight">
+                <div className="about-highlight">
                   <div className="highlight-icon">
                     <FaLightbulb />
                   </div>
@@ -90,7 +90,7 @@ const About = ({ personalInfo, profileImage, onScrollToSection, onOpenImageModal
                     <p>Creative problem-solving with modern technologies</p>
                   </div>
                 </div>
-                <div className="highlight">
+                <div className="about-highlight">
                   <div className="highlight-icon">
                     <FaShieldAlt />
                   </div>
@@ -99,7 +99,7 @@ const About = ({ personalInfo, profileImage, onScrollToSection, onOpenImageModal
                     <p>Clean code, testing, and best practices</p>
                   </div>
                 </div>
-                <div className="highlight">
+                <div className="about-highlight">
                   <div className="highlight-icon">
                     <FaBolt />
                   </div>
@@ -108,7 +108,7 @@ const About = ({ personalInfo, profileImage, onScrollToSection, onOpenImageModal
                     <p>Efficient development with agile methodologies</p>
                   </div>
                 </div>
-                <div className="highlight">
+                <div className="about-highlight">
                   <div className="highlight-icon">
                     <FaChartLine />
                   </div>
