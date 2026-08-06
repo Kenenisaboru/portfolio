@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
-import logoImage from '../images/photo_2025-10-01_12-53-30.jpg';
+import logoImage from '../images/photo_2026-01-28_19-59-49.jpg';
 
 const Header = ({ activeSection, isMenuOpen, onToggleMenu, onScrollToSection }) => {
   return (
@@ -29,7 +29,6 @@ const Header = ({ activeSection, isMenuOpen, onToggleMenu, onScrollToSection }) 
             <span className={`menu-line ${isMenuOpen ? 'open' : ''}`}></span>
             <span className={`menu-line ${isMenuOpen ? 'open' : ''}`}></span>
           </button>
-          
           <div className={`nav-overlay ${isMenuOpen ? 'active' : ''}`} onClick={onToggleMenu}></div>
           
           <nav className={`nav ${isMenuOpen ? 'open' : ''}`} aria-label="Main navigation">
@@ -52,6 +51,16 @@ const Header = ({ activeSection, isMenuOpen, onToggleMenu, onScrollToSection }) 
               className="nav-github"
             >
               <FaGithub /> GitHub
+            </a>
+
+            <a
+              href="/resume.pdf"
+              className="nav-resume"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+            >
+              Resume
             </a>
           </nav>
         </div>
