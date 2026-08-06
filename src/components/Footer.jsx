@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaFacebookF, FaInstagram, FaTelegram, FaHeart, FaArrowUp, FaCode } from 'react-icons/fa';
-import { SiReact } from 'react-icons/si';
+import mayLogo from '../images/photo_2026-01-28_19-59-49.jpg';
 
 const Footer = ({ onScrollToSection }) => {
   return (
@@ -69,6 +69,15 @@ const Footer = ({ onScrollToSection }) => {
                   GitHub
                 </a>
                 <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footer-link"
+                  download
+                >
+                  Download Resume
+                </a>
+                <a
                   href="https://www.linkedin.com/in/kenenisa-boru-8377a13a7/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -99,7 +108,7 @@ const Footer = ({ onScrollToSection }) => {
           <div className="footer-copyright">
             <p>© {new Date().getFullYear()} Kenenisa Boru. All rights reserved.</p>
             <p className="footer-built-with">
-              Built with <SiReact className="react-spin" /> React & <FaHeart className="heart-beat" />
+              Built with <img src={mayLogo} alt="Logo" className="may-logo" /> Kenenisa Boru & <FaHeart className="heart-beat" />
             </p>
           </div>
           <button
