@@ -123,7 +123,7 @@ const Awards = ({ awards, onOpenImageModal }) => {
 
         <div className="certificates-showcase animate-on-scroll">
           <h3>Interactive Certificate Gallery</h3>
-          <p className="gallery-subtitle" style={{ textAlign: 'center', color: '#94a3b8', marginBottom: '1.5rem' }}>
+          <p className="gallery-subtitle">
             Click on any certificate preview to inspect high-resolution credential
           </p>
           <div className="certificate-gallery">
