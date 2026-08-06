@@ -196,7 +196,9 @@ button {
   left: 0;
   right: 0;
   z-index: 1000;
-  height: var(--header-h);
+  /* Respect safe-area (notches) and allow extra space on mobile/status bars */
+  height: calc(var(--header-h) + env(safe-area-inset-top, 0px));
+  padding-top: env(safe-area-inset-top, 0px);
   display: flex;
   align-items: center;
   background: rgba(15, 23, 42, 0.92);
@@ -213,6 +215,13 @@ button {
   justify-content: space-between;
   gap: 1rem;
 }
+
+/* Keep logo fixed size and allow nav to take remaining space and scroll when needed */
+.logo-wrapper { flex: 0 0 auto; }
+.nav { flex: 1 1 auto; justify-content: flex-end; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.nav-link { white-space: nowrap; }
+.nav::-webkit-scrollbar { height: 6px; }
+.nav::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.07); border-radius: 4px; }
 
 .logo-wrapper {
   display: flex;
@@ -1722,6 +1731,21 @@ button {
 }
 
 .react-spin { color: #61dafb; animation: spin 4s linear infinite; }
+
+/* May logo styling */
+.may-logo { width: 18px; height: 18px; border-radius: 50%; object-fit: cover; display: inline-block; vertical-align: middle; }
+
+.skill-logo {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: inline-block;
+  vertical-align: middle;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+}
+
 .heart-beat { color: var(--danger); animation: heartBeat 1.5s ease-in-out infinite; }
 
 .footer-back-to-top {
@@ -1926,8 +1950,14 @@ button {
 
 @media (max-width: 768px) {
   :root { --header-h: 64px; }
-
-  .logo-text-full { display: none; }
+  /* Show full name on smaller screens but allow graceful truncation if space is limited */
+  .logo-text-full {
+    display: inline-block;
+    max-width: 9ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+  }
 
   .hero-stats {
     grid-template-columns: repeat(2, 1fr);
