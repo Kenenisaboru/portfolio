@@ -58,7 +58,8 @@ const Hero = ({ heroBg, typedText, personalInfo, stats, onScrollToSection }) => 
       }
     }
 
-    for (let i = 0; i < 60; i++) {
+    const particleCount = window.innerWidth < 768 ? 25 : 50;
+    for (let i = 0; i < particleCount; i++) {
       particles.push(new Particle());
     }
 
