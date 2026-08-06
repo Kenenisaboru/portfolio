@@ -14,7 +14,6 @@ import {
   FaSeedling,
 } from 'react-icons/fa';
 import {
-  SiReact,
   SiJavascript,
   SiNodedotjs,
   SiExpress,
@@ -33,6 +32,7 @@ import {
 
 import hucissaCert from '../images/photo_2025-04-27_06-58-00.jpg';
 import zemenayCert from '../images/photo_2025-12-26_18-19-46.jpg';
+import mayLogo from '../images/photo_2026-01-28_19-59-49.jpg';
 import dsaCert from '../images/photo_2026-03-10_15-55-39.jpg';
 import hackathonCert from '../images/photo_2026-04-01_16-11-32.jpg';
 import codeAlphaCert from '../images/photo_2026-05-01_09-21-14.jpg';
@@ -44,7 +44,7 @@ export const tagline =
   'Full-Stack Developer & Hackathon Competitor specializing in React, Node.js, MERN stack, and modern mobile-first web applications.';
 
 export const skills = [
-  { name: 'React', level: 'Advanced', percent: '85%', icon: <SiReact />, color: '#61DAFB', category: 'Frontend' },
+  { name: 'React', level: 'Advanced', percent: '85%', icon: <img src={mayLogo} alt="Kenenisa logo" className="skill-logo" />, color: '#61DAFB', category: 'Frontend' },
   { name: 'JavaScript', level: 'Advanced', percent: '80%', icon: <SiJavascript />, color: '#F7DF1E', category: 'Language' },
   { name: 'Node.js', level: 'Advanced', percent: '75%', icon: <SiNodedotjs />, color: '#339933', category: 'Backend' },
   { name: 'Express', level: 'Advanced', percent: '72%', icon: <SiExpress />, color: '#000000', category: 'Backend' },
