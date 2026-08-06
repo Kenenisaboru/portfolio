@@ -14,11 +14,17 @@ const Header = ({ activeSection, isMenuOpen, onToggleMenu, onScrollToSection }) 
               className="logo-image"
             />
             <h1 className="logo">
-              Kenenisa <span className="logo-highlight">Boru</span>
+              <span className="logo-text-full">Kenenisa </span>
+              <span className="logo-highlight">Boru</span>
             </h1>
           </div>
           
-          <button className="mobile-menu-btn" onClick={onToggleMenu}>
+          <button
+            className="mobile-menu-btn"
+            onClick={onToggleMenu}
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMenuOpen}
+          >
             <span className={`menu-line ${isMenuOpen ? 'open' : ''}`}></span>
             <span className={`menu-line ${isMenuOpen ? 'open' : ''}`}></span>
             <span className={`menu-line ${isMenuOpen ? 'open' : ''}`}></span>
@@ -26,7 +32,7 @@ const Header = ({ activeSection, isMenuOpen, onToggleMenu, onScrollToSection }) 
           
           <div className={`nav-overlay ${isMenuOpen ? 'active' : ''}`} onClick={onToggleMenu}></div>
           
-          <nav className={`nav ${isMenuOpen ? 'open' : ''}`}>
+          <nav className={`nav ${isMenuOpen ? 'open' : ''}`} aria-label="Main navigation">
             {['about', 'skills', 'projects', 'opensource', 'awards', 'contact'].map(
               (section) => (
                 <button
