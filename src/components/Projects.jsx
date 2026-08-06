@@ -1,30 +1,6 @@
 import React, { useState } from 'react';
 import { FaGithub, FaExternalLinkAlt, FaServer, FaStar, FaCheckCircle, FaLayerGroup, FaTrophy, FaMobileAlt, FaLaptopCode, FaCalculator } from 'react-icons/fa';
 
-const getProjectTypeColor = (type) => {
-  switch (type) {
-    case 'Full-Stack': return '#6366f1';
-    case 'Frontend': return '#10b981';
-    case 'Backend': return '#f59e0b';
-    case 'Full-Stack / Hackathon': return '#f43f5e';
-    case 'Algorithm': return '#8b5cf6';
-    case 'DevOps': return '#ec4899';
-    case 'Full-Stack / PWA': return '#06b6d4';
-    case 'Mobile / React Native': return '#3b82f6';
-    default: return '#6b7280';
-  }
-};
-
-const getStatusColor = (status) => {
-  switch (status) {
-    case 'Completed': return '#10b981';
-    case 'In Progress': return '#3b82f6';
-    case 'Ongoing': return '#f59e0b';
-    case 'Live': return '#10b981';
-    default: return '#6b7280';
-  }
-};
-
 const filterCategories = [
   { id: 'all', label: 'All Projects', icon: <FaLayerGroup /> },
   { id: 'fullstack', label: 'Full-Stack', icon: <FaServer /> },
@@ -63,16 +39,16 @@ const Projects = ({ projects }) => {
         <div className="filter-wrapper animate-on-scroll">
           <div className="filter-container">
             {filterCategories.map(cat => {
-              const count = cat.id === 'all' 
-                ? projects.length 
+              const count = cat.id === 'all'
+                ? projects.length
                 : projects.filter(p => {
-                    if (cat.id === 'fullstack') return p.type.includes('Full-Stack');
-                    if (cat.id === 'hackathon') return p.type.includes('Hackathon');
-                    if (cat.id === 'mobile') return p.type.includes('PWA') || p.type.includes('Mobile');
-                    if (cat.id === 'frontend') return p.type.includes('Frontend');
-                    if (cat.id === 'algorithm') return p.type.includes('Algorithm');
-                    return false;
-                  }).length;
+                  if (cat.id === 'fullstack') return p.type.includes('Full-Stack');
+                  if (cat.id === 'hackathon') return p.type.includes('Hackathon');
+                  if (cat.id === 'mobile') return p.type.includes('PWA') || p.type.includes('Mobile');
+                  if (cat.id === 'frontend') return p.type.includes('Frontend');
+                  if (cat.id === 'algorithm') return p.type.includes('Algorithm');
+                  return false;
+                }).length;
 
               return (
                 <button
@@ -90,20 +66,36 @@ const Projects = ({ projects }) => {
         {/* Projects Grid */}
         <div className="projects-grid animate-on-scroll">
           {filteredProjects.map((project, index) => {
-            // Maximum 2 badges for a minimal clean top row
             const badge1 = project.type;
             const badge2 = project.featured ? 'Featured' : project.status;
 
+            // Determine accent category class for visual border highlight
+            let accentClass = 'accent-fullstack';
+            if (project.type.toLowerCase().includes('mobile') || project.type.toLowerCase().includes('pwa')) {
+              accentClass = 'accent-mobile';
+            } else if (project.type.toLowerCase().includes('ai')) {
+              accentClass = 'accent-ai';
+            } else if (project.type.toLowerCase().includes('algorithm')) {
+              accentClass = 'accent-algorithm';
+            } else if (project.type.toLowerCase().includes('frontend')) {
+              accentClass = 'accent-frontend';
+            }
+
             return (
-              <div 
-                key={project.title} 
-                className={`project-card-minimal ${project.featured ? 'featured' : ''}`}
+              <div
+                key={project.title}
+                className={`project-card-minimal ${accentClass} ${project.featured ? 'featured' : ''}`}
                 style={{ animationDelay: `${index * 0.08}s` }}
               >
-                {/* Header: Icon + Max 2 subtle outline badges */}
+                {/* Visual Top Accent Strip */}
+                <div className="project-top-strip"></div>
+
+                {/* Header: Icon Badge + Badges */}
                 <div className="project-card-minimal-header">
-                  <div className="project-icon-minimal">
-                    {project.icon}
+                  <div className="project-icon-minimal-wrapper">
+                    <span className="project-icon-minimal">
+                      {project.icon}
+                    </span>
                   </div>
                   <div className="project-badges-minimal">
                     {badge1 && (
@@ -120,11 +112,11 @@ const Projects = ({ projects }) => {
                   </div>
                 </div>
 
-                {/* Body: Prominent Title, Muted Description, Unboxed Highlight Bullet List */}
+                {/* Body: High-Contrast Title, Crisp Description, Highlight Bullets */}
                 <div className="project-card-minimal-body">
                   <h3 className="project-title-minimal">{project.title}</h3>
                   <p className="project-description-minimal">{project.desc}</p>
-                  
+
                   {project.highlights && project.highlights.length > 0 && (
                     <ul className="project-highlights-list">
                       {project.highlights.map((highlight, idx) => (
@@ -136,7 +128,7 @@ const Projects = ({ projects }) => {
                     </ul>
                   )}
 
-                  {/* Tech Stack Tags: Lightweight Outline Style */}
+                  {/* Tech Stack Pills: Distinct High-Contrast Styling */}
                   <div className="project-tech-minimal">
                     {project.tech.map(tech => (
                       <span key={tech} className="tech-tag-minimal">{tech}</span>
@@ -144,7 +136,7 @@ const Projects = ({ projects }) => {
                   </div>
                 </div>
 
-                {/* Footer: Compact CTA Buttons */}
+                {/* Footer: Vivid CTA Action Buttons */}
                 <div className="project-card-minimal-footer">
                   <div className="project-links-minimal">
                     {project.link && (
@@ -176,9 +168,9 @@ const Projects = ({ projects }) => {
 
         <div className="projects-cta animate-on-scroll">
           <p>Want to see more of my code repositories?</p>
-          <a 
-            href="https://github.com/Kenenisaboru" 
-            target="_blank" 
+          <a
+            href="https://github.com/Kenenisaboru"
+            target="_blank"
             rel="noopener noreferrer"
             className="btn btn-primary"
           >
