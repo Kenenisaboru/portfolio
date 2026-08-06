@@ -41,7 +41,7 @@ const Contact = () => {
       return;
     }
 
-    // Open mailto link as a fallback (no backend)
+    // Mailto fallback (no backend)
     const mailtoLink = `mailto:kenenisaboru998@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)}`;
     window.open(mailtoLink, '_blank');
 
@@ -120,9 +120,13 @@ const Contact = () => {
                   <FaInstagram />
                   <span>Instagram</span>
                 </a>
-                <a href="https://t.me/kenenisaboru" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Telegram">
+                <a href="https://t.me/kenenisaboru" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Telegram (personal)">
                   <FaTelegram />
-                  <span>Telegram</span>
+                  <span>Telegram (personal)</span>
+                </a>
+                <a href="https://t.me/kaniwizx" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="Telegram (alt)">
+                  <FaTelegram />
+                  <span>Telegram (alt)</span>
                 </a>
               </div>
             </div>
