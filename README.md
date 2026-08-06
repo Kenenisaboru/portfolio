@@ -9,10 +9,18 @@ Award-winning Full-Stack Developer specializing in the **MERN Stack**, **PWA Dev
 
 ---
 
+## 👋 About Me
+
+I am **Kenenisa Boru**, a passionate Full-Stack Developer from **Haramaya University, Harar**. I build modern web applications with a strong focus on **React**, **Node.js**, **Express**, and **database-driven systems**. My work blends clean frontend design, reliable backend APIs, and responsive, mobile-first user experiences.
+
+I enjoy solving real problems through code, especially products that support education, healthcare, and community collaboration. I am open to **remote work**, **full-time roles**, and **freelance projects**.
+
+---
+
 ## 🌟 Key Highlights
 
 - 🏆 **Top Competitor:** Recognized as the Best Hackathons Competitor among hundreds of developers.
-- 💻 **1350+ Commits:** Dedicated and consistent developer with a strong focus on clean code.
+- 💻 **2250+ Commits:** Dedicated and consistent developer with a strong focus on clean code.
 - 📱 **PWA Expert:** Specialized in building installable web applications that work offline.
 - 🚀 **Full-Stack Mastery:** Extensive experience with React, Node.js, Express, and both SQL/NoSQL databases.
 
