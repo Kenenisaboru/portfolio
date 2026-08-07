@@ -21,7 +21,9 @@ I enjoy solving real problems through code, especially products that support edu
 
 - 🏆 **Top Competitor:** Recognized as the Best Hackathons Competitor among hundreds of developers.
 - 💻 **2250+ Commits:** Dedicated and consistent developer with a strong focus on clean code.
-- 📱 **PWA Expert:** Specialized in building installable web applications that work offline.
+- � **40+ Projects Completed:** Built a wide range of full-stack, mobile, and web applications.
+- 🗂️ **50+ GitHub Repositories:** Consistently creating and maintaining multiple projects and experiments.
+- �📱 **PWA Expert:** Specialized in building installable web applications that work offline.
 - 🚀 **Full-Stack Mastery:** Extensive experience with React, Node.js, Express, and both SQL/NoSQL databases.
 
 ---

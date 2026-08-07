@@ -346,11 +346,11 @@ export const awards = [
 ];
 
 export const stats = [
-  { label: 'Projects Completed', value: '15+', icon: <FaRocket /> },
+  { label: 'Projects Completed', value: '40+', icon: <FaRocket /> },
   { label: 'Years Experience', value: '2+', icon: <FaCalendarAlt /> },
   { label: 'Technologies', value: '12+', icon: <FaCode /> },
-  { label: 'GitHub Repositories', value: '30+', icon: <FaGithub /> },
-  { label: 'Code Commits', value: '1350+', icon: <FaDatabase /> },
+  { label: 'GitHub Repositories', value: '50+', icon: <FaGithub /> },
+  { label: 'Code Commits', value: '2250+', icon: <FaDatabase /> },
   { label: 'Certifications', value: '10+', icon: <FaCertificate /> },
 ];
 
