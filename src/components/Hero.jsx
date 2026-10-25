@@ -138,7 +138,7 @@ const Hero = ({ heroBg, typedText, personalInfo, stats, onScrollToSection }) => 
                 <button className="btn btn-secondary" onClick={() => onScrollToSection('contact')}>
                   <FaEnvelope /> Get In Touch
                 </button>
-                <a href="/resume.pdf" className="btn btn-outline cv-btn" download>
+                <a href={`${process.env.PUBLIC_URL || ''}/resume.pdf`} className="btn btn-outline cv-btn" download>
                   <FaDownload /> Download Resume
                 </a>
               </div>
