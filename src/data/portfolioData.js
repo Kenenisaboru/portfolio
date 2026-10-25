@@ -15,6 +15,7 @@ import {
 } from 'react-icons/fa';
 import {
   SiJavascript,
+  SiReact,
   SiNodedotjs,
   SiExpress,
   SiMongodb,
@@ -32,7 +33,6 @@ import {
 
 import hucissaCert from '../images/photo_2025-04-27_06-58-00.jpg';
 import zemenayCert from '../images/photo_2025-12-26_18-19-46.jpg';
-import mayLogo from '../images/photo_2026-01-28_19-59-49.jpg';
 import dsaCert from '../images/photo_2026-03-10_15-55-39.jpg';
 import hackathonCert from '../images/photo_2026-04-01_16-11-32.jpg';
 import codeAlphaCert from '../images/photo_2026-05-01_09-21-14.jpg';
@@ -44,25 +44,25 @@ export const tagline =
   'Full-Stack Developer & Hackathon Competitor specializing in React, Node.js, MERN stack, and modern mobile-first web applications.';
 
 export const skills = [
-  { name: 'React', level: 'Advanced', percent: '85%', icon: <img src={mayLogo} alt="Kenenisa logo" className="skill-logo" />, color: '#61DAFB', category: 'Frontend' },
-  { name: 'JavaScript', level: 'Advanced', percent: '80%', icon: <SiJavascript />, color: '#F7DF1E', category: 'Language' },
-  { name: 'Node.js', level: 'Advanced', percent: '75%', icon: <SiNodedotjs />, color: '#339933', category: 'Backend' },
-  { name: 'Express', level: 'Advanced', percent: '72%', icon: <SiExpress />, color: '#000000', category: 'Backend' },
-  { name: 'MySQL', level: 'Advanced', percent: '78%', icon: <SiMysql />, color: '#4479A1', category: 'Database' },
-  { name: 'Git/GitHub', level: 'Advanced', percent: '85%', icon: <SiGit />, color: '#F05032', category: 'Tools' },
-  { name: 'HTML5', level: 'Advanced', percent: '90%', icon: <SiHtml5 />, color: '#E34F26', category: 'Frontend' },
-  { name: 'CSS3', level: 'Advanced', percent: '85%', icon: <SiCss3 />, color: '#1572B6', category: 'Frontend' },
-  { name: 'Spring Boot', level: 'Intermediate', percent: '60%', icon: <SiSpringboot />, color: '#6DB33F', category: 'Backend' },
-  { name: 'TailwindCSS', level: 'Intermediate', percent: '65%', icon: <SiTailwindcss />, color: '#06B6D4', category: 'Frontend' },
-  { name: 'C++', level: 'Intermediate', percent: '60%', icon: <SiCplusplus />, color: '#00599C', category: 'Language' },
-  { name: 'MongoDB', level: 'Beginner', percent: '40%', icon: <SiMongodb />, color: '#47A248', category: 'Database' },
-  { name: 'PostgreSQL', level: 'Beginner', percent: '35%', icon: <SiPostgresql />, color: '#336791', category: 'Database' },
-  { name: 'Python', level: 'Beginner', percent: '45%', icon: <SiPython />, color: '#3776AB', category: 'Language' },
-  { name: 'Redux', level: 'Beginner', percent: '30%', icon: <SiRedux />, color: '#764ABC', category: 'Frontend' },
-  { name: 'Postman', level: 'Advanced', icon: <FaCode />, color: '#FF6C37', category: 'Tools' },
-  { name: 'Vercel/Render', level: 'Advanced', icon: <FaRocket />, color: '#000000', category: 'Tools' },
-  { name: 'Figma', level: 'Intermediate', icon: <FaCode />, color: '#F24E1E', category: 'Tools' },
-  { name: 'Docker', level: 'Beginner', icon: <FaDatabase />, color: '#2496ED', category: 'Tools' },
+  { name: 'React', level: 'Advanced', percent: '90%', icon: <SiReact />, color: '#61DAFB', category: 'Frontend' },
+  { name: 'JavaScript (ES6+)', level: 'Advanced', percent: '88%', icon: <SiJavascript />, color: '#F7DF1E', category: 'Language' },
+  { name: 'Node.js', level: 'Advanced', percent: '85%', icon: <SiNodedotjs />, color: '#339933', category: 'Backend' },
+  { name: 'Express.js', level: 'Advanced', percent: '82%', icon: <SiExpress />, color: '#68A063', category: 'Backend' },
+  { name: 'MySQL', level: 'Advanced', percent: '80%', icon: <SiMysql />, color: '#4479A1', category: 'Database' },
+  { name: 'Git & GitHub', level: 'Advanced', percent: '88%', icon: <SiGit />, color: '#F05032', category: 'Tools' },
+  { name: 'HTML5', level: 'Advanced', percent: '95%', icon: <SiHtml5 />, color: '#E34F26', category: 'Frontend' },
+  { name: 'CSS3 / Modern UI', level: 'Advanced', percent: '90%', icon: <SiCss3 />, color: '#1572B6', category: 'Frontend' },
+  { name: 'TailwindCSS', level: 'Proficient', percent: '82%', icon: <SiTailwindcss />, color: '#06B6D4', category: 'Frontend' },
+  { name: 'MongoDB', level: 'Proficient', percent: '78%', icon: <SiMongodb />, color: '#47A248', category: 'Database' },
+  { name: 'PostgreSQL', level: 'Proficient', percent: '75%', icon: <SiPostgresql />, color: '#336791', category: 'Database' },
+  { name: 'Spring Boot', level: 'Familiar', percent: '68%', icon: <SiSpringboot />, color: '#6DB33F', category: 'Backend' },
+  { name: 'C++', level: 'Proficient', percent: '78%', icon: <SiCplusplus />, color: '#00599C', category: 'Language' },
+  { name: 'Python', level: 'Proficient', percent: '72%', icon: <SiPython />, color: '#3776AB', category: 'Language' },
+  { name: 'Redux Toolkit', level: 'Proficient', percent: '75%', icon: <SiRedux />, color: '#764ABC', category: 'Frontend' },
+  { name: 'Postman / REST APIs', level: 'Advanced', percent: '88%', icon: <FaCode />, color: '#FF6C37', category: 'Tools' },
+  { name: 'Vercel / Render', level: 'Advanced', percent: '88%', icon: <FaRocket />, color: '#6366F1', category: 'Tools' },
+  { name: 'Figma', level: 'Proficient', percent: '75%', icon: <FaCode />, color: '#F24E1E', category: 'Tools' },
+  { name: 'Docker', level: 'Familiar', percent: '65%', icon: <FaDatabase />, color: '#2496ED', category: 'Tools' },
 ];
 
 export const projects = [
@@ -86,7 +86,7 @@ export const projects = [
     title: 'AgriLink — AI-Powered Smart Agriculture',
     desc: 'An intelligent agricultural platform with AI crop disease detection and smart farming insights.',
     link: 'https://github.com/Kenenisaboru/Agrilink',
-    demo: 'https://student-complain-voice-complain-platform.onrender.com/',
+    demo: null,
     tech: ['React', 'Node.js', 'AI/ML', 'Python', 'REST API', 'TailwindCSS'],
     type: 'Full-Stack / AI',
     icon: <FaSeedling />,
@@ -242,7 +242,7 @@ export const awards = [
     image: dsaCert,
     type: 'certificate',
     date: 'April 2026',
-    verification: '#',
+    verification: null,
     skills: ['JavaScript', 'Data Structures', 'Algorithms', 'Optimization'],
   },
   {
@@ -253,7 +253,7 @@ export const awards = [
     image: hackathonCert,
     type: 'hackathon',
     date: 'April 2026',
-    verification: '#',
+    verification: null,
     skills: ['Mobile Development', 'React Native', 'Problem Solving'],
   },
   {
@@ -264,7 +264,7 @@ export const awards = [
     image: codeAlphaCert,
     type: 'internship',
     date: 'May 2026',
-    verification: '#',
+    verification: null,
     skills: ['React', 'Node.js', 'Team Collaboration', 'Full-Stack Development'],
   },
   {
@@ -275,7 +275,7 @@ export const awards = [
     image: codeAlphaInternship,
     type: 'internship',
     date: 'May 2026',
-    verification: '#',
+    verification: null,
     skills: ['Full-Stack Development', 'React', 'Node.js', 'Professional Growth'],
   },
   {
@@ -286,7 +286,7 @@ export const awards = [
     image: codeAlphaRecommendation,
     type: 'internship',
     date: 'May 2026',
-    verification: '#',
+    verification: null,
     skills: ['Leadership', 'Technical Excellence', 'Professional Development'],
   },
   {
@@ -297,7 +297,7 @@ export const awards = [
     image: hucissaCert,
     type: 'certificate',
     date: 'December 2024',
-    verification: '#',
+    verification: null,
     skills: ['React', 'Node.js', 'Full-Stack Development'],
   },
   {
@@ -308,7 +308,7 @@ export const awards = [
     image: zemenayCert,
     type: 'hackathon',
     date: 'September 2025',
-    verification: '#',
+    verification: null,
   },
   {
     title: 'Frontend Development Certification',
@@ -329,7 +329,7 @@ export const awards = [
     image: hucissaCert,
     type: 'certificate',
     date: 'July 2025',
-    verification: '#',
+    verification: null,
     skills: ['HTML5', 'CSS3', 'JavaScript Basics'],
   },
   {
@@ -340,7 +340,7 @@ export const awards = [
     image: twoMonthTrainingCert,
     type: 'certificate',
     date: 'May 2026',
-    verification: '#',
+    verification: null,
     skills: ['Professional Development', 'Technical Training', 'Certification'],
   },
 ];
