@@ -54,7 +54,7 @@ const Header = ({ activeSection, isMenuOpen, onToggleMenu, onScrollToSection }) 
             </a>
 
             <a
-              href="/resume.pdf"
+              href={`${process.env.PUBLIC_URL || ''}/resume.pdf`}
               className="nav-resume"
               target="_blank"
               rel="noopener noreferrer"
