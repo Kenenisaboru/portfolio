@@ -70,9 +70,11 @@ const Skills = ({ skills, bgImage }) => {
 
               return (
                 <button
+                  type="button"
                   key={tab.id}
                   className={`filter-btn ${activeTab === tab.id ? 'active' : ''}`}
                   onClick={() => setActiveTab(tab.id)}
+                  aria-pressed={activeTab === tab.id}
                 >
                   {tab.icon} {tab.label}{' '}
                   <span className="filter-badge-count">{count}</span>
