@@ -2455,6 +2455,16 @@ img, svg, picture, video, canvas {
   width: 100%;
 }
 
+.profile-section {
+  grid-template-columns: minmax(0, 1fr);
+  width: 100%;
+}
+
+.profile-section > *,
+.about-text {
+  min-width: 0;
+}
+
 .hero-name {
   font-size: clamp(2rem, 8vw, 3.5rem);
 }
@@ -2812,7 +2822,7 @@ img, svg, picture, video, canvas {
 
   .profile-section {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 2.5rem;
   }
 
