@@ -12,6 +12,8 @@ import {
   FaUsers,
   FaTrophy,
   FaSeedling,
+  FaSchool,
+  FaUniversity,
 } from 'react-icons/fa';
 import {
   SiJavascript,
