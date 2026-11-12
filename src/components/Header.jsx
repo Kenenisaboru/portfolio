@@ -1,8 +1,15 @@
 import React from 'react';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaSun, FaMoon } from 'react-icons/fa';
 import logoImage from '../images/photo_2026-01-28_19-59-49.jpg';
 
-const Header = ({ activeSection, isMenuOpen, onToggleMenu, onScrollToSection }) => {
+const Header = ({
+  activeSection,
+  isMenuOpen,
+  onToggleMenu,
+  onScrollToSection,
+  theme,
+  onToggleTheme,
+}) => {
   return (
     <header className="header">
       <div className="container">
@@ -18,17 +25,33 @@ const Header = ({ activeSection, isMenuOpen, onToggleMenu, onScrollToSection }) 
               <span className="logo-highlight">Boru</span>
             </h1>
           </div>
+
+          <div className="header-right-actions">
+            <button
+              className="theme-toggle-btn"
+              onClick={onToggleTheme}
+              aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+              title={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+            >
+              {theme === 'dark' ? (
+                <FaSun className="theme-icon sun" />
+              ) : (
+                <FaMoon className="theme-icon moon" />
+              )}
+            </button>
+
+            <button
+              className="mobile-menu-btn"
+              onClick={onToggleMenu}
+              aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+              aria-expanded={isMenuOpen}
+            >
+              <span className={`menu-line ${isMenuOpen ? 'open' : ''}`}></span>
+              <span className={`menu-line ${isMenuOpen ? 'open' : ''}`}></span>
+              <span className={`menu-line ${isMenuOpen ? 'open' : ''}`}></span>
+            </button>
+          </div>
           
-          <button
-            className="mobile-menu-btn"
-            onClick={onToggleMenu}
-            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
-            aria-expanded={isMenuOpen}
-          >
-            <span className={`menu-line ${isMenuOpen ? 'open' : ''}`}></span>
-            <span className={`menu-line ${isMenuOpen ? 'open' : ''}`}></span>
-            <span className={`menu-line ${isMenuOpen ? 'open' : ''}`}></span>
-          </button>
           <div className={`nav-overlay ${isMenuOpen ? 'active' : ''}`} onClick={onToggleMenu}></div>
           
           <nav className={`nav ${isMenuOpen ? 'open' : ''}`} aria-label="Main navigation">
