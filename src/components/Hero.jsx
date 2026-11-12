@@ -104,8 +104,10 @@ const Hero = ({ heroBg, typedText, personalInfo, stats, onScrollToSection }) => 
             <div className="hero-text">
               <div className="hero-badges">
                 <span className="badge badge-primary">Full-Stack Developer</span>
-                <span className="badge badge-secondary">React Specialist</span>
-                <span className="badge badge-accent">Available for Hire</span>
+                <span className="badge badge-secondary">React & Node Specialist</span>
+                <span className="badge badge-accent badge-available">
+                  <span className="live-dot-pulse"></span> Available for Hire & Freelance
+                </span>
               </div>
               <h1>
                 <span className="hero-greeting">Hello, I'm</span>
