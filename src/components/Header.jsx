@@ -32,14 +32,14 @@ const Header = ({ activeSection, isMenuOpen, onToggleMenu, onScrollToSection }) 
           <div className={`nav-overlay ${isMenuOpen ? 'active' : ''}`} onClick={onToggleMenu}></div>
           
           <nav className={`nav ${isMenuOpen ? 'open' : ''}`} aria-label="Main navigation">
-            {['about', 'skills', 'projects', 'opensource', 'awards', 'contact'].map(
+            {['about', 'skills', 'projects', 'awards', 'contact'].map(
               (section) => (
                 <button
                   key={section}
                   className={`nav-link ${activeSection === section ? 'active' : ''}`}
                   onClick={() => onScrollToSection(section)}
                 >
-                  {section === 'opensource' ? 'Open Source' : section.charAt(0).toUpperCase() + section.slice(1)}
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
                   <span className="nav-indicator"></span>
                 </button>
               )

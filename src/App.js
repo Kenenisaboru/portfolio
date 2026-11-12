@@ -10,7 +10,6 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-import OpenSource from './components/OpenSource';
 import Awards from './components/Awards';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -18,7 +17,6 @@ import {
   tagline,
   skills,
   projects,
-  featuredRepositories,
   awards,
   stats,
   personalInfo,
@@ -60,7 +58,7 @@ const App = () => {
     const handleScroll = () => {
       setScrollVisible(window.scrollY > 300);
 
-      const sections = ['about', 'skills', 'projects', 'opensource', 'awards', 'contact'];
+      const sections = ['about', 'skills', 'projects', 'awards', 'contact'];
       const current = sections.find((section) => {
         const element = document.getElementById(section);
         if (!element) return false;
@@ -147,7 +145,6 @@ const App = () => {
 
       <Skills skills={skills} bgImage={skillsBg} />
       <Projects projects={projects} />
-      <OpenSource contributions={featuredRepositories} />
       <Awards awards={awards} onOpenImageModal={(src, title) => setSelectedImage({ src, title })} />
       <Contact />
       <Footer onScrollToSection={scrollToSection} />

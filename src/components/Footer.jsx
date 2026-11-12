@@ -39,13 +39,13 @@ const Footer = ({ onScrollToSection }) => {
             <div className="footer-links">
               <div className="link-group">
                 <h4>Quick Links</h4>
-                {['about', 'skills', 'projects', 'opensource', 'awards', 'contact'].map(section => (
+                {['about', 'skills', 'projects', 'awards', 'contact'].map(section => (
                   <button
                     key={section}
                     className="footer-link"
                     onClick={() => onScrollToSection(section)}
                   >
-                    {section === 'opensource' ? 'Open Source' : section.charAt(0).toUpperCase() + section.slice(1)}
+                    {section.charAt(0).toUpperCase() + section.slice(1)}
                   </button>
                 ))}
               </div>
