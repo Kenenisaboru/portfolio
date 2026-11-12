@@ -98,6 +98,7 @@ const Projects = ({ projects }) => {
             />
             {searchQuery && (
               <button
+                type="button"
                 className="search-clear-btn"
                 onClick={() => setSearchQuery('')}
                 title="Clear search"
@@ -133,9 +134,11 @@ const Projects = ({ projects }) => {
 
                 return (
                   <button
+                    type="button"
                     key={cat.id}
                     className={`filter-btn ${activeFilter === cat.id ? 'active' : ''}`}
                     onClick={() => setActiveFilter(cat.id)}
+                    aria-pressed={activeFilter === cat.id}
                   >
                     {cat.icon} {cat.label} <span className="filter-badge-count">{count}</span>
                   </button>
