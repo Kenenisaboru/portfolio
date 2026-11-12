@@ -197,55 +197,77 @@ const Contact = () => {
               <div className={`form-group ${errors.name ? 'error' : ''}`}>
                 <input
                   type="text"
+                  id="contact-name"
                   name="name"
                   placeholder="Your Name"
                   value={formData.name}
                   onChange={handleChange}
-                  aria-label="Your name"
+                  autoComplete="name"
+                  inputMode="text"
+                  required
+                  aria-required="true"
+                  aria-label="Your full name"
+                  aria-invalid={Boolean(errors.name)}
                 />
-                {errors.name && <span className="form-error">{errors.name}</span>}
+                {errors.name && <span className="form-error" role="alert">{errors.name}</span>}
               </div>
               <div className={`form-group ${errors.email ? 'error' : ''}`}>
                 <input
                   type="email"
+                  id="contact-email"
                   name="email"
                   placeholder="Your Email"
                   value={formData.email}
                   onChange={handleChange}
-                  aria-label="Your email"
+                  autoComplete="email"
+                  inputMode="email"
+                  required
+                  aria-required="true"
+                  aria-label="Your email address"
+                  aria-invalid={Boolean(errors.email)}
                 />
-                {errors.email && <span className="form-error">{errors.email}</span>}
+                {errors.email && <span className="form-error" role="alert">{errors.email}</span>}
               </div>
               <div className={`form-group ${errors.subject ? 'error' : ''}`}>
                 <input
                   type="text"
+                  id="contact-subject"
                   name="subject"
                   placeholder="Subject"
                   value={formData.subject}
                   onChange={handleChange}
-                  aria-label="Subject"
+                  autoComplete="off"
+                  inputMode="text"
+                  required
+                  aria-required="true"
+                  aria-label="Message subject"
+                  aria-invalid={Boolean(errors.subject)}
                 />
-                {errors.subject && <span className="form-error">{errors.subject}</span>}
+                {errors.subject && <span className="form-error" role="alert">{errors.subject}</span>}
               </div>
               <div className={`form-group ${errors.message ? 'error' : ''}`}>
                 <textarea
+                  id="contact-message"
                   name="message"
                   placeholder="Your Message"
                   rows="5"
                   value={formData.message}
                   onChange={handleChange}
+                  required
+                  aria-required="true"
                   aria-label="Your message"
+                  aria-invalid={Boolean(errors.message)}
                 ></textarea>
-                {errors.message && <span className="form-error">{errors.message}</span>}
+                {errors.message && <span className="form-error" role="alert">{errors.message}</span>}
               </div>
               <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
                 {isSubmitting ? (
                   <>
-                    <FaSpinner className="spin-icon" /> Sending...
+                    <FaSpinner className="spin-icon" aria-hidden="true" /> Sending...
                   </>
                 ) : (
                   <>
-                    <FaPaperPlane /> Send Message
+                    <FaPaperPlane aria-hidden="true" /> Send Message
                   </>
                 )}
               </button>
